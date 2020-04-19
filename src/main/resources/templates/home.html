@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+
+<html
+        xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+
+
+<p shiro:authenticated="">已登录</p>
+<p shiro:notAuthenticated="">未登录</p>
+<p shiro:hasRole="vip1">vip1
+    <ul>
+<p shiro:hasPermission="vip1:add">增</p>
+<p shiro:hasPermission="vip1:delete">删</p>
+<p shiro:hasPermission="vip1:update">改</p>
+<p shiro:hasPermission="vip1:select">查</p>
+</ul>
+</p>
+<p shiro:hasRole="vip2">vip2
+    <ul>
+<p shiro:hasPermission="vip2:add">增</p>
+<p shiro:hasPermission="vip2:delete">删</p>
+<p shiro:hasPermission="vip2:update">改</p>
+<p shiro:hasPermission="vip2:select">查</p>
+</ul>
+</p>
+<p shiro:hasRole="vip3">vip3
+    <ul>
+<p shiro:hasPermission="vip3:add">增</p>
+<p shiro:hasPermission="vip3:delete">删</p>
+<p shiro:hasPermission="vip3:update">改</p>
+<p shiro:hasPermission="vip3:select">查</p>
+</ul>
+</p>
+
+<a href="/userlogin">登录</a>
+
+<form method="post" action="userlogout">
+    <input type="submit" value="退出">
+</form>
+</body>
+</html>
